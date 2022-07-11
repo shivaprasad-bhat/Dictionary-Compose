@@ -11,7 +11,7 @@ data class WordInfoDto(
     val word: String
 ) {
     fun toWordInfo() = WordInfo(
-        meaningDtos = meaningDtos.map { it.toMeaning() },
+        meanings = meaningDtos.map { it.toMeaning() },
         license = licenseDto.toLicense(),
         phonetic = phonetic,
         sourceUrls = sourceUrls,
