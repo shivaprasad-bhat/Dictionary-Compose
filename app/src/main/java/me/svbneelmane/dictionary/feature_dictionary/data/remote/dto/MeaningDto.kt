@@ -8,12 +8,10 @@ data class MeaningDto(
     val partOfSpeech: String,
     val synonyms: List<String>
 ) {
-    fun toMeaning(): Meaning {
-        return Meaning(
-            definition = definitionDtos.map { it.toDefinition() },
-            antonyms = antonyms,
-            partOfSpeech = partOfSpeech,
-            synonyms = synonyms
-        )
-    }
+    fun toMeaning() = Meaning(
+        definition = definitionDtos.map { it.toDefinition() },
+        antonyms = antonyms,
+        partOfSpeech = partOfSpeech,
+        synonyms = synonyms
+    )
 }

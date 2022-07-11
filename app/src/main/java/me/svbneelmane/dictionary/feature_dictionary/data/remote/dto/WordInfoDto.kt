@@ -10,13 +10,11 @@ data class WordInfoDto(
     val sourceUrls: List<String>,
     val word: String
 ) {
-    fun toWordInfo(): WordInfo {
-        return WordInfo(
-            meaningDtos = meaningDtos.map { it.toMeaning() },
-            license = licenseDto.toLicense(),
-            phonetic = phonetic,
-            sourceUrls = sourceUrls,
-            word = word
-        )
-    }
+    fun toWordInfo() = WordInfo(
+        meaningDtos = meaningDtos.map { it.toMeaning() },
+        license = licenseDto.toLicense(),
+        phonetic = phonetic,
+        sourceUrls = sourceUrls,
+        word = word
+    )
 }
